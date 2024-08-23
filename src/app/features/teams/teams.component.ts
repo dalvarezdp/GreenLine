@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './teams.component.scss'
 })
 export class TeamsComponent {
-
+  title = 'GreenLine';
 }
