@@ -1,0 +1,19 @@
+<div class="sidenav-header">
+  <img [width]="profilePicSize()" [height]="profilePicSize()" src="img/profile-pic.jpg" />
+  <div class="header-text" [class.hide-header-text]="collapsed()">
+    <h2>Sngular</h2>
+    <p>Pedro Gomez</p>
+  </div>
+</div>
+<mat-nav-list class="sidenav-list">
+  <a
+    mat-list-item
+    class="menu-item"
+    *ngFor="let item of menuItems()"
+    [routerLink]="item.route"
+    routerLinkActive="active-link"
+  >
+    <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+    <span matListItemTitle>{{ item.label }}</span>
+  </a>
+</mat-nav-list>
